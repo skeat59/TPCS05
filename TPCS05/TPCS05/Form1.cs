@@ -28,14 +28,14 @@ namespace TPCS05
         public void DoAttack(int n)
         {
             // Let's fight ! Call AttackWith method
-            // FIXME
+            arena.AttackWith(n);
             // Update PV of ponies on the windows Form.
             this.rightLife.Value = arena.Right.Pv;
             this.rightPV.Text = arena.Right.Pv + " / " + arena.Right.PvMax;
             this.leftLife.Value = arena.Left.Pv;
             this.leftPV.Text = arena.Left.Pv + " / " + arena.Left.PvMax;
             // We switch attaking and defensive pony in the Arena object.
-            // FIXME
+            arena.ChangeAttacker();
         }
 
         private Image getPonyImage(PonyColor ponyColor)

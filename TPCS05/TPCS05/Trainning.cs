@@ -9,6 +9,9 @@ namespace TPCS05
     {
         public static void Train()
         {
+            Pony my_first_pony = new Pony("Barthelemy", 42, PonyColor.Applejack, 42) ;
+            my_first_pony.Name = "Barthelemy";
+            my_first_pony.Color = PonyColor.Applejack;
         }
     }
 }

@@ -13,13 +13,20 @@ namespace TPCS05
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+           
+
 #if PONY
             // Create the left and right ponies here
-            // FIXME
+            Pony left = new Pony("LEFT", 42, PonyColor.Applejack, 42);
+            Pony right = new Pony("RIGHT", 42, PonyColor.Rarity, 42);
             // Set two attacks for each pony
-            // FIXME
+            left.SetAttack(new Attack("charge", 2, 42, 18, 24, 42), 4);
+            left.SetAttack(new Attack("charge", 2, 42, 18, 24, 42), 4);
+
+            right.SetAttack(new Attack("charge", 2, 42, 18, 24, 42), 4);
+            right.SetAttack(new Attack("charge", 2, 42, 18, 24, 42), 4);
             // Create an Arena with the two ponies
-            // FIXME
+            Arena arena = new Arena(ref left, ref right);
             Application.Run(new Form1(arena));
 #else
             Application.Run(new Form1());
