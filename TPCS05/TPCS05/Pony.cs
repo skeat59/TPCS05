@@ -82,7 +82,15 @@ namespace TPCS05
 
         public void LoosePV(Attack AttaqueQuiTue)
         {
-            pv = pv - AttaqueQuiTue.Damage();
+            int res = pv - AttaqueQuiTue.Damage();
+            if (res >=0)
+            {
+                pv =res;
+            }
+            else
+            {
+                pv = 0;
+            }
         }
 
         public string Talk()
