@@ -20,11 +20,11 @@
         {
             if (joueur == 0)
             {
-                Left.LoosePV(Right.GetAttack(n));
+                Right.LoosePV(Right.GetAttack(n));
             }
             else
             {
-                Right.LoosePV(Left.GetAttack(n));
+                Left.LoosePV(Left.GetAttack(n));
             }
         }
 
